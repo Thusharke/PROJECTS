@@ -25,13 +25,13 @@ app.get("/parallax_image", (req,res) => {
     res.render("Parallax image/index.ejs");
 })
 app.get("/photo_gallery", (req,res) => {
-    res.render("'photo gallery'/index.ejs");
+    res.render("photo gallery/index.ejs");
 })
 app.get("/resume", (req,res) => {
     res.render("Resume/index.ejs");
 })
 app.get("/rps", (req,res) => {
-    res.render("Rock Paper Scissor_game/index.ejs");
+    res.render("Rock Paper Scissor game/index.ejs");
 })
 app.get("/shopping_cart", (req,res) => {
     res.render("Shopping cart/index.ejs");
