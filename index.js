@@ -37,7 +37,7 @@ app.get("/shopping_cart", (req,res) => {
     res.render("Shopping cart/index.ejs");
 })
 app.get("/survey_form", (req,res) => {
-    res.render("Survey form/index.ejs");
+    res.render("Survey Form/index.ejs");
 })
 app.get("/todolist", (req,res) => {
     res.render("ToDoList/index.ejs");
