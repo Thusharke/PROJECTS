@@ -1,0 +1,75 @@
+body{
+	background: #834d9b;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #d04ed6, #834d9b);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #d04ed6, #834d9b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	text-align : center;
+	margin : 0;
+	font-family: 'Merriweather', serif;
+	transition : background 0.4s;
+}
+h1{
+	background-color: black;
+    color : white;
+    font-size: 1.8rem;
+	font-weight: 700;
+	padding : 2rem 0;
+	margin : 0;
+}
+
+.stripe{
+	text-align: center;
+	height : 34px;
+	background-color : white;
+}
+#reset{
+	height : 34px;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+	background-color: white;
+	border:none;
+	outline: none;
+    color : black;
+    transition : background 0.4s;
+}
+#reset:hover{
+	background-color: black;
+	color : white;
+	transition : background 0.4s;
+}
+
+.game-section{
+	margin : 20px auto;
+	width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.option{
+	border-radius: 50%;
+	padding: 12% 12%;
+	margin : 1%;
+    background-color: white;
+    transition: all 0.5s;
+}
+.option:hover{
+    background-color: pink !important;
+}
+i{
+	font-size : 3rem;
+}
+
+
+.blue{
+	display: inline-block;
+	margin : 6px 6px 0;
+	height : 20px;
+	width : 20px;
+	background-color: pink;
+}
+.purple{
+	display: inline-block;
+	margin : 6px 6px 0;
+	height : 20px;
+	width : 20px;
+	background-color: purple;
+}

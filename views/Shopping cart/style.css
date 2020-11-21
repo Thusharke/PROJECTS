@@ -1,0 +1,142 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing : border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(218, 216, 216);
+    overflow-x: hidden;
+}
+.hide{
+    display: none !important;
+}
+
+
+.nav-bar{
+    height : 10vh;
+    background-color: rgb(36, 34, 34);
+    color : whitesmoke;
+    display: flex;
+    line-height: 10vh;
+    justify-content: space-between;
+    position: relative;
+    z-index: 5;
+}
+.nav-bar div{
+    margin : 0 20px;
+}
+.nav-bar .cart-icon{
+    cursor : pointer;
+}
+.icon{
+    color:White;
+}
+
+.item-list{
+    display: flex;
+    flex-wrap : wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.item{
+    margin : 30px 30px;
+    padding : 5px;
+    background-color: whitesmoke;
+    border: 2px solid rgb(112, 111, 111);
+    border-radius: 5px;
+}
+.item img{
+    height: 70%;
+}
+.item .name{
+    font-weight: 600;
+}
+.item .type{
+    color : rgb(49, 49, 49);
+    font-size: 0.9rem;
+}
+.item .price{
+    font-weight: 600;
+}
+.item .price .cut{
+    font-weight: normal;
+    color: rgb(43, 42, 42);
+    text-decoration: line-through;
+}
+.item .price .offer{
+    font-weight: normal;
+    color: rgb(226, 51, 51);   
+}
+.item .btn-div{
+    text-align: center;
+    margin: 3px 0;
+ }
+.item .add{
+   display: inline-block;
+   outline : none;
+   padding : 6px 14px;
+   font-weight: 600;
+   color: white;
+   cursor: pointer;
+   background-color: rgb(76, 158, 76);
+   border : 1px solid rgb(49, 119, 49);
+   border-radius: 3px;
+}
+.item-list .item .add:hover{
+    background-color: rgb(36, 110, 36);
+    border : 1px solid rgb(23, 65, 23);
+ }
+
+
+ .cart{
+    width: 100vw;
+    min-height: 100vh;
+    padding : 30px 100px;
+    position: absolute;
+    top : 0;
+    transform : translateX(100%);
+    background-color: rgb(233, 231, 231);
+    transition: all 0.5s;
+    z-index: 3;
+ }
+ .slide{
+    transform: translateX(0%);
+ }
+ .header{
+     margin-top : 4rem;
+ }
+
+ .cart-items{
+    list-style: none;
+    display: flex;
+    flex-wrap : wrap;
+    justify-content: space-evenly;
+    align-items: center;
+ }
+ .side .item .btn-div{
+     display: inline-block;
+     color : rgb(223, 48, 48) !important;
+     margin-right : 14px;
+ }
+ .inc, .dec{
+     border: none;
+     outline : none;
+     cursor : pointer;
+     padding : 5px 10px;
+     margin : 0 3px;
+     background-color: rgb(233, 166, 41);
+     border-radius: 4px;
+     color : rgb(255, 255, 255);
+     font-size: large;
+     font-weight : bold;
+ }
+ .qty{
+     display: inline-block;
+     margin : 0 7px;
+ }
+
+ .price-header{
+    font-weight: normal;
+    color: rgb(221, 41, 41);
+ }

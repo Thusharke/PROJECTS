@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <style>
+        *{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: whitesmoke;
+}
+@media screen and (min-width : 700px) {
+    .content{
+        width : 35%;
+        margin : 0 auto;
+        margin-bottom: 3rem;
+        border : 1px solid rgb(51, 51, 51);
+        border-radius : 10px;
+        background-color: white;
+    }
+}
+@media screen and (max-width : 700px) {
+    .content{
+        width : 90%;
+        margin : 0 auto;
+        margin-bottom: 3rem;
+        border : 1px solid rgb(51, 51, 51);
+        border-radius : 10px;
+        background-color: white;
+    }
+}
+h1{
+    color : rgb(74, 74, 248);
+    margin: 2rem;
+    text-align: center; 
+}
+.form{
+    width : 85%;
+    margin : 1.2rem;
+}
+.form input{
+    padding : 0.1rem;
+    border : none;
+    outline : none;
+    border-bottom: 1px solid rgb(74, 74, 248);
+}
+textarea{
+    outline : none;
+    padding: 0.1rem;
+    width: 90%;
+}
+.input-div{
+    margin-bottom : 0.8rem;
+}
+.block{
+    display : block;
+}
+.bold{
+    font-weight:bold;
+}
+.long{
+    width: 90%;
+}
+.button{
+    border : 1px solid rgb(64, 64, 216);
+    outline : none;
+    padding : 0.3rem 0.7rem;
+    border-radius: 3px;
+    color : white;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    background-color: rgb(74, 74, 248);
+    margin-right : 4px;
+}
+.noborder{
+    border : none !important;
+}
+
+
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>About You ...</h1>
+    <div class="content">
+        <form class="form">
+            <div class="input-div">
+                <label for="name" class="block bold">Name</label>
+                <input class="long" type="text" autocomplete="off" placeholder="Ex. Thushar" name="name" id="name">
+            </div>
+            <div class="input-div">
+                <label for="mail" class="block bold">Email</label>
+                <input class="long" type="email" placeholder="Ex. abcd@gmail.com" name="mail" id="mail">
+            </div>
+            <div class="input-div">
+                <label for="password" class="block bold">Password</label>
+                <input class="long" type="password" placeholder="Enter Password" name="password" id="password">
+            </div>
+            <div class="input-div">
+                <label for="DOB" class="block bold">DOB</label>
+                <input class="long" type="date" id="DOB">
+            </div>
+            <div class="input-div">
+                <p class="bold">Favorite Animal</p>
+                <div>
+                    <input type="radio" id="dog" value="Dog" name="fav-animal">
+                    <label for="dog">Dog</label>
+                </div>
+                <div>
+                    <input type="radio" id="cat" value="Cat" name="fav-animal"> 
+                    <label for="cat">Cat</label>
+                </div>
+                <div>
+                    <input type="radio" id="others" value="Others" name="fav-animal">
+                    <label for="others">Others</label>
+                </div>
+            </div>
+            <div class="input-div">
+                <label for="gender" class="bold">Gender</label>
+                <select name="gender" id="gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
+            <div class="input-div">
+                <label for="prof" class="block bold">Love for Web-development on a scale 1-100</label>
+                <input type="range" name="prof" id="prof" class="long">
+            </div>
+            <div class="input-div">
+                <label for="story" class="block bold">Tell us about yourself</label>
+                <textarea name="story" id="story" cols="65" rows="6"></textarea>
+            </div>
+            <div class="input-div">
+                <p class="bold">Sports you like to play</p>
+                <div>
+                    <input type="checkbox" id="tt" name="tt" value="Table Tennis">
+                    <label for="tt">Table Tennis</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="ck" name="ck" value="Cricket">
+                    <label for="ck">Cricket</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="og" name="og" value="Other games">
+                    <label for="og">Other games</label>
+                </div>
+            </div>
+            <div class="input-div">
+                <label for="file" class="block bold">Upload pic</label>
+                <input type="file" id="file" class="noborder">
+            </div>
+            <button type="reset"  class="button">Reset</button>
+            <button type="submit" class="button">Post</button>
+        </form>
+    </div> 
+</body>
+</html>

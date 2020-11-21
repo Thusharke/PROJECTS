@@ -1,0 +1,118 @@
+body {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.content {
+    padding: 1% 4%;
+}
+
+
+.border {
+    height: 50px;
+    background-color: red;
+    width: 100%;
+}
+
+
+.profile-div {
+    padding: 1% 5%;
+}
+.inline{
+    display: inline-block;
+}
+.profile-pic {
+    margin-top: 2.5%;
+    width: 18%;
+}
+.profile-pic img{
+    border-radius: 50%;
+    width:  80%;
+}
+.last {
+    color: red;
+}
+.desig {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+/* part 4 ends here */
+
+.name {
+    width: 40%;
+    padding: 2%;
+    font-size: 3rem;
+}
+.name div {
+    width: 100%;
+}
+.contact {
+    padding: 3% 0% 3% 3%;
+    width: 32%;
+    vertical-align: top;
+}
+.contact div {
+    text-align: right;
+    width: 100%;
+    padding: 0px 10px 20px 10px;
+}
+
+/* part 5 ends here */
+
+
+.sub-title {
+    text-transform: uppercase;
+    font-size: 25px;
+}
+.left {
+    width: 20%;
+    text-align: right;
+    vertical-align: top;
+}
+.right {
+    width: 78%;
+    margin-left: 1%; 
+    border-top: 4px solid red;
+    padding: 10px 0px 20px 0px;
+    margin-top: 10px;
+}
+ul {
+    padding-left: 10px !important;
+}
+
+ /* part 6 ends here */
+
+.color-red {
+    color: red;
+    padding: 0% 0% 25px 0%;
+}
+.noborder {
+    border: none !important;
+    margin-top: -10px;
+}
+.bold {
+    font-weight: bold;
+}
+
+/* part 7 ends here */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

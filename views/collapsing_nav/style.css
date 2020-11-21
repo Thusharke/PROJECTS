@@ -1,0 +1,120 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing : border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    height : 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.2)), url("https://images.pexels.com/photos/1402787/pexels-photo-1402787.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.nav-bar{
+    height : 10vh;
+    display: flex;
+    justify-content: space-around;
+    line-height: 10vh;
+    background-color: rgb(26, 26, 26);
+    position: relative;
+    z-index: 10;
+}
+
+
+@media (max-width : 700px){
+    .logo{
+        width : 90%;
+        color : whitesmoke;
+    }
+}
+@media (min-width : 700px){
+    .logo{
+        width : 30%;
+        color : white;
+    }
+}
+
+
+
+@media (max-width : 700px){
+    .links{
+        display: none;
+    }
+}
+.links{
+    width: 30%;
+}
+.top-list{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.nav-links{
+    color : white;
+    text-decoration: none;
+}
+
+
+
+@media (max-width : 700px){
+    .burger{
+        display: inline-block;
+    }
+}
+@media (min-width : 700px){
+    .burger{
+        display: none;
+    }
+}
+.burger{
+    position: absolute;
+    cursor: pointer;
+    width : 30px;
+    right : 2vh;
+    top : 2.5vh;
+    text-align: center;
+}
+.line{
+    width: 25px;
+    border-bottom: 3px solid white;
+    margin : 6px 0;
+}
+
+@media (max-width : 700px){
+    .side{
+        display: block;
+    }
+}
+@media (min-width : 700px){
+    .side{
+        display: none;
+    }
+}
+.side{
+    height : 100vh;
+    width : 250px;
+    background-color: rgb(116, 38, 38);
+    position: fixed;
+    top : 0;
+    right : 0;
+    padding : 80px 50px;
+    transform: translateX(100%);
+    transition: all 1s;
+}
+.side-list{
+    list-style: none;
+}
+.side-links{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color : white;
+}
+
+.slide{
+    opacity: 1;
+    transform: translateX(0%);
+}

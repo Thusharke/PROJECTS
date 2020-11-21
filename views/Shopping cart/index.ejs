@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f3ca4af96f.js" crossorigin="anonymous"></script>
+    <title>GrabIt</title>
+    <style>
+        *{
+    margin : 0;
+    padding : 0;
+    box-sizing : border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(218, 216, 216);
+    overflow-x: hidden;
+}
+.hide{
+    display: none !important;
+}
+
+
+.nav-bar{
+    height : 10vh;
+    background-color: rgb(36, 34, 34);
+    color : whitesmoke;
+    display: flex;
+    line-height: 10vh;
+    justify-content: space-between;
+    position: relative;
+    z-index: 5;
+}
+.nav-bar div{
+    margin : 0 20px;
+}
+.nav-bar .cart-icon{
+    cursor : pointer;
+}
+.icon{
+    color:White;
+}
+
+.item-list{
+    display: flex;
+    flex-wrap : wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.item{
+    margin : 30px 30px;
+    padding : 5px;
+    background-color: whitesmoke;
+    border: 2px solid rgb(112, 111, 111);
+    border-radius: 5px;
+}
+.item img{
+    height: 70%;
+}
+.item .name{
+    font-weight: 600;
+}
+.item .type{
+    color : rgb(49, 49, 49);
+    font-size: 0.9rem;
+}
+.item .price{
+    font-weight: 600;
+}
+.item .price .cut{
+    font-weight: normal;
+    color: rgb(43, 42, 42);
+    text-decoration: line-through;
+}
+.item .price .offer{
+    font-weight: normal;
+    color: rgb(226, 51, 51);   
+}
+.item .btn-div{
+    text-align: center;
+    margin: 3px 0;
+ }
+.item .add{
+   display: inline-block;
+   outline : none;
+   padding : 6px 14px;
+   font-weight: 600;
+   color: white;
+   cursor: pointer;
+   background-color: rgb(76, 158, 76);
+   border : 1px solid rgb(49, 119, 49);
+   border-radius: 3px;
+}
+.item-list .item .add:hover{
+    background-color: rgb(36, 110, 36);
+    border : 1px solid rgb(23, 65, 23);
+ }
+
+
+ .cart{
+    width: 100vw;
+    min-height: 100vh;
+    padding : 30px 100px;
+    position: absolute;
+    top : 0;
+    transform : translateX(100%);
+    background-color: rgb(233, 231, 231);
+    transition: all 0.5s;
+    z-index: 3;
+ }
+ .slide{
+    transform: translateX(0%);
+ }
+ .header{
+     margin-top : 4rem;
+ }
+
+ .cart-items{
+    list-style: none;
+    display: flex;
+    flex-wrap : wrap;
+    justify-content: space-evenly;
+    align-items: center;
+ }
+ .side .item .btn-div{
+     display: inline-block;
+     color : rgb(223, 48, 48) !important;
+     margin-right : 14px;
+ }
+ .inc, .dec{
+     border: none;
+     outline : none;
+     cursor : pointer;
+     padding : 5px 10px;
+     margin : 0 3px;
+     background-color: rgb(233, 166, 41);
+     border-radius: 4px;
+     color : rgb(255, 255, 255);
+     font-size: large;
+     font-weight : bold;
+ }
+ .qty{
+     display: inline-block;
+     margin : 0 7px;
+ }
+
+ .price-header{
+    font-weight: normal;
+    color: rgb(221, 41, 41);
+ }
+
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav-bar">
+        <div class="logo">
+            <h2>GrabIt</h2>
+        </div>
+        <div class="cart-icon">
+            <i class="fas fa-shopping-cart fa-lg icon" onclick="showcart()"></i>
+        </div>
+    </div>
+
+    <div class="item-list">
+        <div class="item">
+            <img class="item-img" src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/11780956/2020/4/3/f724f764-2aae-4918-ba70-6a20335f90451585905028495HIGHLANDERMenWhiteBlueSlimFitPrintedCasualShirt1.jpg" alt="">
+            <p class="name">HIGHLANDER</p>
+            <p class="type">Men Printed Casual Shirt</p>
+            <p class="price">Rs. 545 <span class="cut">Rs. 1049</span> <span class="offer">(48% OFF)</span></p>
+            <p class="btn-div"><button class="add">Add to cart</button></p>
+        </div>
+        <div class="item">
+            <img class="item-img" src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/1700944/2019/6/8/972c9498-3a37-4d5d-976c-4493b4d5c0021559989322793-HRX-by-Hrithik-Roshan-Men-Yellow-Printed-Round-Neck-T-Shirt--1.jpg" alt="">
+            <p class="name">HRX by Hrithik Roshan</p>
+            <p class="type">Printed Round Neck T-Shirt</p>
+            <p class="price">Rs. 454 <span class="cut">Rs. 699 </span> <span class="offer">(35% OFF)</span></p>
+            <p class="btn-div"><button class="add">Add to cart</button></p>
+        </div>
+        <div class="item">
+            <img class="item-img" src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/2347569/2019/3/20/4a40874e-e475-4619-a37b-047fa4e1ad061553073506249-HIGHLANDER-Men-Green-Slim-Fit-Camouflage-Print-Casual-Shirt--1.jpg" alt="">
+            <p class="name">HIGHLANDER</p>
+            <p class="type">Slim Fit Camouflage Shirt</p>
+            <p class="price">Rs. 574 <span class="cut">Rs. 1149</span> <span class="offer">(50% OFF)</span></p>
+            <p class="btn-div"><button class="add">Add to cart</button></p>
+        </div>
+        <div class="item">
+            <img class="item-img" src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2019/12/14/19b0c7a8-5885-4777-8fef-06e407cff86d1576292890000-1.jpg" alt="">
+            <p class="name">KASSUALLY</p>
+            <p class="type">Women Mustard Peplum Top</p>
+            <p class="price">Rs. 610 <span class="cut">Rs. 1299</span> <span class="offer">(53% OFF)</span></p>
+            <p class="btn-div"><button class="add">Add to cart</button></p>
+        </div>
+        <div class="item">
+            <img class="item-img" src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/11752878/2020/6/10/d5d8f19f-5f0b-495e-aa48-a7d6bddc7ad81591777889730-MANQ-Men-Shirts-4011591777887904-1.jpg" alt="">
+            <p class="name">MANQ</p>
+            <p class="type">Slim Fit Casual Shirt</p>
+            <p class="price">Rs. 551 <span class="cut">Rs. 1199</span> <span class="offer">(54% OFF)</span></p>
+            <p class="btn-div"><button class="add">Add to cart</button></p>
+        </div>
+        <div class="item">
+            <img class="item-img" src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2020/10/6/acbbd16a-9ed2-483f-882a-8b1c5f3f1ea51601941223936-1.jpg" alt="">
+            <p class="name">Everlush</p>
+            <p class="type">Women Silver Shimm Top</p>
+            <p class="price">Rs. 454 <span class="cut">Rs. 699 </span> <span class="offer">(35% OFF)</span></p>
+            <p class="btn-div"><button class="add">Add to cart</button></p>
+        </div>
+        <div class="item">
+            <img class="item-img" src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/1510828/2020/1/20/8d5ca9e9-b3f1-4c14-baab-51e7300993251579509422884-SASSAFRAS-Women-Black-Solid-Styled-Back-Top-3301579509421263-1.jpg" alt="">
+            <p class="name">SASSAFRAS</p>
+            <p class="type">Women Black Styled Top</p>
+            <p class="price">Rs. 549 <span class="cut">Rs. 1099</span> <span class="offer">(50% OFF)</span></p>
+            <p class="btn-div"><button class="add">Add to cart</button></p>
+        </div>
+        <div class="item">
+            <img class="item-img" src="https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/12409506/2020/9/15/0f4f06ad-8e05-4758-a0df-b32ec17e71a51600149848029DOROTHYPERKINSWomenBlackPetiteSolidAsymmetricClosureBikerJac1.jpg" alt="">
+            <p class="name">DOROTHY PERKINS</p>
+            <p class="type">Women Navy Blue Top</p>
+            <p class="price">Rs. 2990 </p>
+            <p class="btn-div"><button class="add">Add to cart</button></p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="cart">
+        <h1 class="header">Shopping Cart</h1>
+        <ul class="cart-items">
+
+        </ul>
+        <div>
+            <h2 class="price-header">Total Amount</h2>
+            <p class="Total-price">Rs. 0</p>
+        </div>
+    </div>
+
+    <script>
+        
+var add = document.querySelectorAll(".add");
+var total_price = document.querySelector(".Total-price");
+var item_list = document.querySelector(".cart-items");
+var total = 0;
+
+for(var i=0;i<add.length;i++){
+    add[i].onclick = function(){
+        var clone = this.parentElement.parentElement.cloneNode(true);
+        addItem(clone);
+        showcart();
+    }
+}
+
+function updateTotal(price,sign){
+    total = total + sign*price;
+    total_price.innerHTML = "Rs. " + total;
+}
+
+function addItem(item){
+    var img = item.querySelector("img").src;
+
+    //finding if the following element already exists
+    var items = document.querySelectorAll(".side");
+    for(var i=0;i<items.length;i++){
+        var img_src = items[i].querySelector("img").src;
+        if(img_src === img){
+            console.log(items[i].querySelector(".item").querySelector(".qty"));
+            updateCount(items[i].querySelector(".item").querySelector(".qty"),items[i].querySelector(".item"),1);
+            return;
+        }
+    }
+
+    //if does not then do the following
+
+    var price = parseInt(item.querySelector(".price").textContent.split(" ")[1]);
+    var li = document.createElement("li");
+    var img = item.querySelector("img").src;
+    var qty = document.createElement("p");
+
+    //adding classes to differentiate
+    li.classList.add("side");
+    qty.classList.add("qty");
+
+    //To display the Quantity
+    qty.innerHTML = "1";
+    updateTotal(price,1);
+
+    //To increase the quantity
+    var btnIn = document.createElement("button");
+    btnIn.classList.add("inc");
+    btnIn.innerHTML = '<i class="fas fa-plus"></i>';
+    btnIn.addEventListener("click", function(){
+        updateCount(qty,this.parentElement,1);
+    });
+
+    //To decrease the quantity
+    var btnDec = document.createElement("button");
+    btnDec.classList.add("dec");
+    btnDec.innerHTML = '<i class="fas fa-minus"></i>';
+    btnDec.addEventListener("click", function(){
+        updateCount(qty,this.parentElement,-1);
+    });
+
+    //creating remove button 
+    item.querySelector(".add").textContent = "Remove";
+    item.querySelector(".add").onclick = function(){
+        var count = parseInt(qty.textContent);
+        updateTotal(count*price,-1);
+        this.parentElement.parentElement.parentElement.remove();
+    }
+
+    //appending newly created components
+         item.appendChild(btnIn);
+         item.appendChild(qty);
+         item.appendChild(btnDec);
+           li.appendChild(item);
+           console.log(li);
+    item_list.appendChild(li);
+}
+
+function updateCount(qty,parent,sign){
+    var count = parseInt(qty.textContent);
+    var price = parseInt(parent.querySelector(".price").textContent.split(" ")[1]);
+    updateTotal(price,sign);
+    count = count + sign*1;
+    if(count == 0)  parent.parentElement.remove();
+    else            qty.innerHTML = count;
+}
+
+function showcart(){
+    var list = document.querySelector(".item-list");
+    var cart = document.querySelector(".cart");
+    cart.classList.toggle("slide");
+    list.classList.toggle("hide");
+}
+
+    </script>
+</body>
+</html>
