@@ -19,7 +19,7 @@ app.get("/login_page", (req,res) => {
     res.render("login_Page/login.ejs");
 })
 app.get("/movie_poster", (req,res) => {
-    res.render("movie_poster/home.ejs");
+    res.render("movie poster/home.ejs");
 })
 app.get("/parallax_image", (req,res) => {
     res.render("Parallax image/index.ejs");
@@ -31,13 +31,13 @@ app.get("/resume", (req,res) => {
     res.render("Resume/index.ejs");
 })
 app.get("/rps", (req,res) => {
-    res.render("Rock_Paper_Scissor_game/index.ejs");
+    res.render("Rock Paper Scissor_game/index.ejs");
 })
 app.get("/shopping_cart", (req,res) => {
-    res.render("Shopping_cart/index.ejs");
+    res.render("Shopping cart/index.ejs");
 })
 app.get("/survey_form", (req,res) => {
-    res.render("Survey_form/index.ejs");
+    res.render("Survey form/index.ejs");
 })
 app.get("/todolist", (req,res) => {
     res.render("ToDoList/index.ejs");
